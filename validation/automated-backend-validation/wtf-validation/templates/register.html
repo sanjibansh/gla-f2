@@ -1,0 +1,37 @@
+<html>
+<title>Register</title>
+
+<body>
+    <h1>Register</h1>
+    <form method="post" action="http://127.0.0.1:5000/register" novalidate>
+        {{ form.hidden_tag() }}
+
+        {{ form.username.label }}<br>
+        {{ form.username() }}<br><br>
+        {% for error in form.username.errors %}
+        <li style="color: red;">{{ error }}</li>
+        {% endfor %}
+
+        {{ form.mobile.label }}<br>
+        {{ form.mobile() }}<br><br>
+        {% for error in form.mobile.errors %}
+        <li style="color: red;">{{ error }}</li>
+        {% endfor %}
+
+        {{ form.email.label }}<br>
+        {{ form.email() }}<br><br>
+        {% for error in form.email.errors %}
+        <li style="color: red;">{{ error }}</li>
+        {% endfor %}
+
+        {{ form.password.label }}<br>
+        {{ form.password() }}<br><br>
+        {% for error in form.password.errors %}
+        <li style="color: red;">{{ error }}</li>
+        {% endfor %}
+
+        {{ form.submit() }}
+    </form>
+</body>
+
+</html>

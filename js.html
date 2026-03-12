@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+#label {
+background-color:#334466
+}
+</style>
+</head>
+<body>
+<input type="text" id="text">
+
+<button onClick="fun()" id="button">submit</button>
+<label id="label"></label>
+
+<script>
+function fun() {
+	let name = document.getElementById("text").value
+	let len = name.length
+	alert("You clicked: " + len)
+}
+
+document.getElementById("button").addEventListener("click", function(){
+alert("great!!")
+document.getElementById("label").innerText = document.getElementById("text").value
+})
+
+</script>
+</body>
+</html>

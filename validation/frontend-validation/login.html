@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+body {
+	text-align:center
+}
+.register-button{
+	color:red;
+	background-color:black;
+
+}
+#name{
+	color:red
+}
+</style>
+</head>
+<body>
+<form>
+Mobile<br>
+<input type="text" id="mobile" name="mobile" placeholder="Enter your mobile"><br>
+Password<br>
+<input type="password" id="pass" name="pass"><br>
+
+<button onClick="validate()"class="register-button">Login</button>
+</form>
+<script>
+function validate() {
+	let name = document.getElementById("name").value
+	if(name == "")
+	alert("Please enter name...")
+
+	let mobile = document.getElementById("mobile").value
+	if(mobile.length != 10)
+	alert("Please enter valid number...")
+}
+</script>
+</body>
+</html>
